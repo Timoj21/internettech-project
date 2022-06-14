@@ -1,0 +1,66 @@
+<!-- <div class="container">
+    <mat-grid-list cols="4" rowHeight="fit" gutterSize=""8>
+
+        <mat-grid-tile [colspan]="1" [rowspan]="1" class="light">
+            light 1
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="1" [rowspan]="1" class="light">
+            light 2
+        </mat-grid-tile>
+        
+        <mat-grid-tile [colspan]="1" [rowspan]="1" class="light">
+            light 3
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="1" [rowspan]="1" class="light">
+            light 4
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="2" [rowspan]="1" class="motion-sensor">
+            motion sensor 1
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="2" [rowspan]="1" class="motion-sensor">
+            motion sensor 2
+        </mat-grid-tile>
+    </mat-grid-list>
+</div> -->
+<div class="container">
+    <mat-grid-list cols="1" rowHeight="fit" gutterSize="8">
+
+        <mat-grid-tile [colspan]="1" [rowspan]="1" class="title">
+            <div>
+                <h1>Exercise Generator</h1>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="1" [rowspan]="1" class="header">
+            <mat-checkbox *ngFor="let group of muscleGroups" (click)="onCheck(group)">{{group.name}}</mat-checkbox>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="1" [rowspan]="10" class="body">
+            <div *ngIf="selectedExercise.name == ''">
+                <h1>No exercise generated</h1>
+            </div>
+            <div *ngIf="selectedExercise.name != ''" class="exercise">
+                <mat-grid-list cols="4" rowHeight="fit" gutterSize="8">
+                    <mat-grid-tile [colspan]="1" [rowspan]="1">
+                        <!-- <div class="image"></div> -->
+                        <img src='assets/images/runningman.jpg' class="image">
+                    </mat-grid-tile>
+                    <mat-grid-tile [colspan]="3" [rowspan]="1">
+                        <div class="info">
+                            <div class="name"><h2>{{selectedExercise.name}}</h2></div>
+                            <div class="des">{{selectedExercise.description}}</div>
+                        </div>
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="1" [rowspan]="1" class="footer">
+            <button mat-button (click)="onGenerateExercise()" mat-raised-button color="primary">Generate Exercise</button>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

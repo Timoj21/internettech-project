@@ -1,0 +1,73 @@
+.container {
+    height: 100%;
+    width: 100%;
+    //background-color: black;
+}
+
+mat-grid-list {
+    height: 95%;
+    width: 100%;
+    //background-color: aqua;
+}
+
+mat-grid-tile {
+    height: 500px;
+    //background-color: rebeccapurple;
+}
+
+mat-checkbox {
+    padding-right: 10px;
+}
+
+.title {
+    height: 100px;
+}
+
+.header {
+    height: 200px;
+    //background-color: blueviolet;
+}
+
+.body {
+    //background-color: bisque;
+}
+
+.footer {
+    //background-color: pink;
+}
+
+.image {
+    //background-color: aquamarine;
+   //height: 100px;
+    width: 100%;
+    //background-image: url(assets/images/runningman.jpg);
+}
+
+.exercise {
+    height: 100%;
+    width: 100%;
+}
+
+.infoTitle {
+    //background-color: black;
+    height: 100%;
+    width: 100%
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    //background-color: brown;
+    height: 100%;
+    width: 100%
+}
+
+.name {
+    //background-color: orange;
+}
+
+.des{
+    padding-top: 10px;
+    padding-right: 150px;
+    //background-color: purple;
+}
